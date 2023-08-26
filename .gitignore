@@ -60,6 +60,7 @@
 *
 !/**/
 !*.*
+!makefile
 
 # Assembly files
 *.s
