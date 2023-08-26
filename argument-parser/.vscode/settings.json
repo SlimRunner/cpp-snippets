@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "vector": "cpp"
+  },
+  "makefile.launchConfigurations": [
+    {
+      "cwd": "/home/david/Documents/development/learning/cpp-snippets/argument-parser/build/apps",
+      "binaryPath": "/home/david/Documents/development/learning/cpp-snippets/argument-parser/build/apps/ArgParser",
+      "binaryArgs": []
+    }
+  ]
+}
