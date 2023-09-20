@@ -7,6 +7,11 @@
       "cwd": "/home/david/Documents/development/learning/cpp-snippets/argument-parser/build/apps",
       "binaryPath": "/home/david/Documents/development/learning/cpp-snippets/argument-parser/build/apps/ArgParser",
       "binaryArgs": []
+    },
+    {
+      "cwd": "e:\\DV2\\workshop_n_documents\\app_development\\learning\\cpp-snippets\\argument-parser\\build\\apps",
+      "binaryPath": "e:\\DV2\\workshop_n_documents\\app_development\\learning\\cpp-snippets\\argument-parser\\build\\apps\\ArgParser",
+      "binaryArgs": []
     }
   ]
 }

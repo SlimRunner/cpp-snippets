@@ -1,9 +1,20 @@
+#### LINUX COMMS ####
 RM = rm -f
 FixPath = $1
 
 define MD
 	mkdir -p $1
 endef
+#####################
+
+### WINDOWS COMMS ###
+# RM = del /Q /S
+# FixPath = $(subst /,\,$1)
+
+# define MD
+# 	if not exist $1 mkdir $1
+# endef
+#####################
 
 CXX := g++
 CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror
@@ -13,7 +24,7 @@ APP_DIR  := $(BUILD)/apps
 TARGET   := ArgParser
 INCLUDE  := -I include/
 SRC      :=                      \
-   $(wildcard src/*.cpp)         \
+	$(wildcard src/*.cpp)         \
 
 OBJECTS  := $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 DEPENDENCIES := $(OBJECTS:.o=.d)
