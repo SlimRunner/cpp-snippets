@@ -9,8 +9,14 @@ to add the necessary file to allow headers from other folders.
 
 int main(int argc, char const *argv[]) {
   System::ArgParser sysArgs(argc, argv);
-  for (const auto &flag: sysArgs.getKeys()) {
-    std::cout << flag << "\n";
+  for (auto const &flag: sysArgs) {
+    std::cout << "<" << flag.first << ">";
+    std::cout << " with " << flag.second.size();
+    std::cout << " arguments" << "\n";
+    for (auto const &arg: flag.second) {
+      std::cout << "    ";
+      std::cout << arg << "\n";
+    }
   }
   std::cout << "\nsuccessful exit\n";
   return 0;

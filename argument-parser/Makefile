@@ -1,3 +1,5 @@
+include test_args.txt
+
 ifeq ($(OS),Windows_NT)
 	detected_OS := Windows
 else
@@ -70,9 +72,13 @@ $(DBG_APP_DIR)/$(TARGET): $(DBG_OBJECTS)
 .PHONY:
 	all build clean info run run-debug
 	build-debug clean-debug info-debug
+	test
 
 run: build
 	$(call FixPath,$(REL_APP_DIR)/$(TARGET)) $(ARGS)
+
+test:
+	$(MAKE) run ARGS="$(TEST_ARGS)"
 
 run-debug: build-debug
 	$(call FixPath,$(DBG_APP_DIR)/$(TARGET)) $(ARGS)
