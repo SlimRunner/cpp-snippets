@@ -6,10 +6,15 @@ endif
 
 ifeq ($(detected_OS),Windows)
 	EXT = .exe
+	TIME = powershell -Command "Measure-Command {./$(TARGET) $(ITERS)}"
+endif
+ifeq ($(detected_OS),Linux)
+	EXT = 
+	TIME = time ./$(TARGET) $(ITERS)
 endif
 
 TARGET = main$(EXT)
-CXXFLAGS += -O2
+CXXFLAGS += -O0
 
 all: build
 
@@ -19,7 +24,7 @@ $(TARGET): main.cpp Makefile
 build: $(TARGET)
 
 run: build
-	$(TARGET)
+	$(TIME)
 
 .PHONY:
 	all run
