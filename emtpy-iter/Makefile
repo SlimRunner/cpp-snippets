@@ -7,8 +7,7 @@ endif
 ifeq ($(detected_OS),Windows)
 	EXT = .exe
 	TIME = powershell -Command "Measure-Command {./$(TARGET) $(ITERS)}"
-endif
-ifeq ($(detected_OS),Linux)
+else
 	EXT = 
 	TIME = time ./$(TARGET) $(ITERS)
 endif
