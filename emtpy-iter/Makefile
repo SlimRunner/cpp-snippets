@@ -13,7 +13,7 @@ else
 endif
 
 TARGET = main$(EXT)
-CXXFLAGS += -O0
+CXXFLAGS += -O1
 
 all: build
 
